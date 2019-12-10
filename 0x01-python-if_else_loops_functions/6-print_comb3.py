@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-cont1 = 0; cont2 = 1
+cont1 = 0
+cont2 = 1
 y = cont2
 while (cont1 < 8):
     while (y < 10):
