@@ -1,12 +1,13 @@
 #!/usr/bin/python3
 import random
-number = random.randint(-10000, 10000)
+#number = random.randint(-10000, 10000)
+number =0
 if number < 0:
     num = number % -10
 elif number > 0:
     num = number % 10
-
-txt = "Last digit of "
+elif number == 0:
+    num = 0
 if num == 0:
     print("Last digit of {} is {} and is 0".format(number, num))
 elif num > 5:
