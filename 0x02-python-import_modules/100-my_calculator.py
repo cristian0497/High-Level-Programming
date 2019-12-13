@@ -1,23 +1,25 @@
-#!/usr/bin/python3
+#!/bin/python3
 from calculator_1 import add, sub, mul, div
 import sys
 
 
 def main():
     if len(sys.argv) == 4:
-        a, b = int(sys.argv[1]), int(sys.argv[3])
+        a = int(sys.argv[1])
+        b = int(sys.argv[3])
         sig = sys.argv[2]
         if sig == '+':
-            print("{} {} {} = {}".format(a, sig, b,  add(a, b)))
+            ret = add(a, b)
         elif sig == '-':
-            print("{} {} {} = {}".format(a, sig, b,  sub(a, b)))
+            ret = sub(a, b)
         elif sig == '*':
-            print("{} {} {} = {}".format(a, sig, b,  mul(a, b)))
+            ret = mul(a, b)
         elif sig == '/':
-            print("{} {} {} = {}".format(a, sig, b,  div(a, b)))
+            ret = div(a, b)
         else:
             print("Unknown operator. Available operators: +, -, * and /")
             exit(1)
+        print("{} {} {} = {:d}".format(a, sig, b,  ret))
     else:
         print("Usage: ./100-my_calculator.py <a> <operator> <b>")
         exit(1)
