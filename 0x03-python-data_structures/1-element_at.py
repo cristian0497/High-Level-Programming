@@ -6,4 +6,4 @@ def element_at(my_list, idx):
             if idx == cont:
                 return my_list[idx]
             cont += 1
-    return none
+    return None
