@@ -6,6 +6,6 @@ def print_matrix_integer(matrix=[[]]):
         while y < len(matrix[x]):
             print("{:d}".format(matrix[x][y]), end="")
             y += 1
-        print('')
+        print('\n', end="")
         x += 1
         y = 0
