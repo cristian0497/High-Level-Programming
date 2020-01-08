@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 def safe_print_division(a, b):
     ret = 0
+    print("Inside result:", end="")
     try:
-        print("Inside result:", end="")
         ret = a / b
     except:
         return None
