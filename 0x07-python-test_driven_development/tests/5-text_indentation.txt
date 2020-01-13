@@ -1,0 +1,41 @@
+>>> text_inden = __import__('5-text_indentation').text_indentation
+>>> text = "es un texto de prueba"
+>>> text_inden(text)
+es un texto de prueba
+
+>>> text = "es un texto. De prueba: entiendes?"
+>>> text_inden(text)
+es un texto.
+<BLANKLINE>
+De prueba:
+<BLANKLINE>
+entiendes?
+<BLANKLINE>
+
+>>> text_inden(None)
+Traceback (most recent call last):
+	  ...
+TypeError: text must be a string
+
+>>> text_inden(10)
+Traceback (most recent call last):
+	  ...
+TypeError: text must be a string
+
+>>> text_inden(True)
+Traceback (most recent call last):
+	  ...
+TypeError: text must be a string
+
+>>> text_inden(False)
+Traceback (most recent call last):
+	  ...
+TypeError: text must be a string
+
+>>> text_inden("Holi")
+Holi
+
+>>> text_inden(10.3)
+Traceback (most recent call last):
+	  ...
+TypeError: text must be a string
