@@ -1,0 +1,59 @@
+>>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+>>> matrix = [[1,2,3], [4,5,6]]
+
+>>> matrix_divided(matrix, 0)
+Traceback (most recent call last):
+	  ...
+ZeroDivisionError: division by zero
+
+>>> matrix_divided(matrix, "0")
+Traceback (most recent call last):
+	  ...
+TypeError: div must be a number
+
+>>> matrix_divided(matrix, False)
+Traceback (most recent call last):
+	  ...
+ZeroDivisionError: division by zero
+
+>>> matrix_divided(matrix, None)
+Traceback (most recent call last):
+	  ...
+TypeError: div must be a number
+
+>>> matrix_divided(matrix, 10.1)
+[[0.1, 0.2, 0.3], [0.4, 0.5, 0.59]]
+
+>>> matrix = [["a", 2, 3], [4, 5, 6]]
+
+>>> matrix_divided(matrix, 10)
+Traceback (most recent call last):
+	  ...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+>>> matrix = [[10, 20, 30]]
+
+>>> matrix_divided(matrix, 2)
+[[5.0, 10.0, 15.0]]
+
+>>> matrix = [None]
+
+>>> matrix_divided(matrix, 2)
+Traceback (most recent call last):
+	  ...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+>>> matrix = None
+
+>>> matrix_divided(matrix, 2)
+Traceback (most recent call last):
+	  ...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+>>> matrix = 0
+
+>>> matrix_divided(matrix, 2)
+Traceback (most recent call last):
+	  ...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
