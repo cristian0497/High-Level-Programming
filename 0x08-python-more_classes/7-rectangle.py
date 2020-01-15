@@ -21,7 +21,7 @@ class Rectangle:
             return ""
         for x in range(self.__height):
             for y in range(self.__width):
-                string += str(Rectangle.print_symbol)
+                string += str(self.print_symbol)
             string += '\n'
         return string[:-1]
 
