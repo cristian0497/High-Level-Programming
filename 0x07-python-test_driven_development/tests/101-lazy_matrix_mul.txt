@@ -1,0 +1,5 @@
+>>> lazy = __import__('101-lazy_matrix_mul').lazy_matrix_mul
+>>> lazy([1, 2], [1, 2])
+5
+>>> lazy([3, 4], [5, 6])
+39
