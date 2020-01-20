@@ -21,4 +21,3 @@ def matrix_mul(m_a, m_b):
         for num in a:
             if type(num) != int and type(num) != float:
                 raise TypeError("m_a should contain only integers or floats")
-            
