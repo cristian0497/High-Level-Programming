@@ -10,6 +10,7 @@ class BaseGeometry:
     """
     def __init__(self):
         pass
+
     def area(self):
         raise Exception("area() is not implemented")
 
@@ -25,7 +26,7 @@ class Rectangle(BaseGeometry):
     Class Rectangle
     """
     def __init__(self, width, height):
-        self.integer_validator("width", width)
-        self.integer_validator("height", height)
+        BaseGeometry.integer_validator(self, "width", width)
+        BaseGeometry.integer_validator(self, "height", height)
         self.__width = width
         self.__height = height
