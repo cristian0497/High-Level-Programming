@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Isinstance() of an object
+Isinstance of an object
 """
 
 
