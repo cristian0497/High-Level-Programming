@@ -11,7 +11,7 @@ def pascal_triangle(size):
     if size <= 0:
         return []
     triangle = [[1], [1, 1]]
-    for x in range(1, size):
+    for x in range(1, size - 1):
         line = [1]
         for y in range(0, len(triangle[x]) - 1):
             line.extend([triangle[x][y] + triangle[x][y + 1]])
