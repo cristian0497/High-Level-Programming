@@ -1,6 +1,11 @@
 >>> MyList = __import__('1-my_list').MyList
->>> lista = []
->>> type(lista)
-<class 'list'>
->>> print(lista)
+>>> L1 = MyList()
+>>> type(L1)
+<class '1-my_list.MyList'>
+>>> print(L1)
 []
+>>> L1.append(1)
+>>> L1.append(3)
+>>> L1.append(2)
+>>> print(L1)
+[1, 3, 2]
