@@ -8,6 +8,8 @@ def pascal_triangle(size):
     """
     Pascal Triangle
     """
+    if size <= 0:
+        return []
     triangle = [[1], [1, 1]]
     for x in range(1, size):
         line = [1]
