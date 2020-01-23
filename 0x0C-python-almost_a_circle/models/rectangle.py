@@ -80,8 +80,12 @@ class Rectangle(Base):
         return (self.__height * self.__width)
 
     def display(self):
-        """ print the Rectangule """
+        """ print the Rectangule  width, height, x, y, id"""
+        for y in range(0, self.__y):
+            print()
         for line in range(0, self.__height):
+            for x in range(0, self.x):
+                print(" ", end="")
             for colum in range(0, self.__width):
                 print("#", end="")
             print()
