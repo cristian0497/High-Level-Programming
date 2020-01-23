@@ -89,3 +89,25 @@ class Rectangle(Base):
             for colum in range(0, self.__width):
                 print("#", end="")
             print()
+
+    def update(self, *args):
+        try:
+            self.id = args[0]
+        except:
+            pass
+        try:
+            self.width = args[1]
+        except:
+            pass
+        try:
+            self.height = args[2]
+        except:
+            pass
+        try:
+            self.x = args[3]
+        except:
+            pass
+        try:
+            self.y = args[4]
+        except:
+            pass
