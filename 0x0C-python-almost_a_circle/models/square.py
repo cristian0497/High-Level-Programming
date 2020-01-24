@@ -24,3 +24,5 @@ class Square(Rectangle):
         """ Setter of size"""
         self.height = height
         self.width = height
+
+    def update(

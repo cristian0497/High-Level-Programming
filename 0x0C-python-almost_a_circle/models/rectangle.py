@@ -7,7 +7,7 @@ from models.base import Base
 
 class Rectangle(Base):
     """
-
+    Class Rectangle
     """
 
     def __init__(self, width, height, x=0, y=0, id=None):
@@ -90,24 +90,12 @@ class Rectangle(Base):
                 print("#", end="")
             print()
 
-    def update(self, *args):
-        try:
-            self.id = args[0]
-        except:
-            pass
-        try:
-            self.width = args[1]
-        except:
-            pass
-        try:
-            self.height = args[2]
-        except:
-            pass
-        try:
-            self.x = args[3]
-        except:
-            pass
-        try:
-            self.y = args[4]
-        except:
-            pass
+    def update(self, *args, **kwargs):
+        """ method to update the instances of object """
+        lista = ['id', 'width', 'heught', 'x', 'y']
+        if args is None or len(args) is 0:
+            for key, value in kwargs.items():
+                setattr(self, key, value)
+        else:
+            for x in range(0, len(args)):
+                setattr(self, lista[x], args[x])
