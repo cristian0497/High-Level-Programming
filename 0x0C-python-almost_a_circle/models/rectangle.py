@@ -103,7 +103,7 @@ class Rectangle(Base):
     def to_dictionary(self):
         """ Dictionary representatios of object """
         dic = {}
-        lista = ['id', 'width', 'heught', 'x', 'y']
+        lista = ['id', 'width', 'height', 'x', 'y']
         for x in lista:
             dic[x] = getattr(self, x)
         return dic
