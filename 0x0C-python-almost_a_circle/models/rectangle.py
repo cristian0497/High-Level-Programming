@@ -99,3 +99,11 @@ class Rectangle(Base):
         else:
             for x in range(0, len(args)):
                 setattr(self, lista[x], args[x])
+
+    def to_dictionary(self):
+        """ Dictionary representatios of object """
+        dic = {}
+        lista = ['id', 'width', 'heught', 'x', 'y']
+        for x in lista:
+            dic[x] = getattr(self, x)
+        return dic
