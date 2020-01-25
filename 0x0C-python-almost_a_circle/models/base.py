@@ -3,6 +3,7 @@
 Class base
 """
 import json
+import os
 
 
 class Base:
@@ -54,3 +55,17 @@ class Base:
             ret = cls(2, 2)
         ret.update(**dictionary)
         return ret
+
+    @classmethod
+    def load_from_file(cls):
+        """ returt a list of instances """
+        list_ret = []
+        filename = cls.__name__ + ".json"
+        if os.path.exists(filename) is None:
+            return list_ret
+        with open(filename, mode="r") as f:
+            line = f.read()
+        n_line = cls.from_json_string(line)
+        for x in range(0, len(n_line)):
+                list_ret.append(cls.create(**n_line[x]))
+        return list_ret
