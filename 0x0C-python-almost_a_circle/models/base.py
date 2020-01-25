@@ -67,5 +67,5 @@ class Base:
             line = f.read()
         n_line = cls.from_json_string(line)
         for x in range(0, len(n_line)):
-                list_ret.append(cls.create(**n_line[x]))
+            list_ret.append(cls.create(**n_line[x]))
         return list_ret
