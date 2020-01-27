@@ -4,6 +4,7 @@ Class base
 """
 import json
 import os
+import csv
 
 
 class Base:
@@ -43,7 +44,7 @@ class Base:
     def from_json_string(json_string):
         """ load from json """
         if json_string is None or len(json_string) is 0:
-            return "[]"
+            return []
         return json.loads(json_string)
 
     @classmethod
@@ -69,3 +70,13 @@ class Base:
         for x in range(0, len(n_line)):
             list_ret.append(cls.create(**n_line[x]))
         return list_ret
+"""
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        filename = cls.__name__ + ".csv"
+        with open(filename, mode="w") as data:
+            data_csv = csv.writer(data,
+            if cls.__name__ == "Rectangle":
+    @classmethod
+    def load_from_file_csv(cls):
+"""
