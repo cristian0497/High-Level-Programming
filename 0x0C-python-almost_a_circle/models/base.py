@@ -62,7 +62,6 @@ class Base:
         """ returt a list of instances """
         list_ret = []
         filename = cls.__name__ + ".json"
-        print(filename)
         if os.path.exists(filename) is False:
             return list_ret
         with open(filename, mode="r") as f:
