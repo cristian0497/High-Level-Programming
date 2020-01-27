@@ -9,7 +9,6 @@ class Rectangle(Base):
     """
     Class Rectangle
     """
-
     def __init__(self, width, height, x=0, y=0, id=None):
         self.width = width
         self.height = height
@@ -92,7 +91,7 @@ class Rectangle(Base):
 
     def update(self, *args, **kwargs):
         """ method to update the instances of object """
-        lista = ['id', 'width', 'heught', 'x', 'y']
+        lista = ['id', 'width', 'height', 'x', 'y']
         if args is None or len(args) is 0:
             for key, value in kwargs.items():
                 setattr(self, key, value)
