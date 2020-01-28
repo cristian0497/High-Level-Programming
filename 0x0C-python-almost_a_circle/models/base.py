@@ -70,13 +70,41 @@ class Base:
         for x in range(0, len(n_line)):
             list_ret.append(cls.create(**n_line[x]))
         return list_ret
-"""
+
     @classmethod
     def save_to_file_csv(cls, list_objs):
+        """
+        Save into a file .csv
+        """
         filename = cls.__name__ + ".csv"
+        if cls.__name__ == "Rectangle":
+            csv_format = ["id", "width", "height", "x", "y"]
+        if cls.__name__ == "Square":
+            csv_format = ["id", "size", "x", "y"]
+
         with open(filename, mode="w") as data:
-            data_csv = csv.writer(data,
-            if cls.__name__ == "Rectangle":
+            writer = csv.DictWriter(data, fieldnames=csv_format)
+            [writer.writerow(item.to_dictionary()) for item in list_objs]
+
     @classmethod
     def load_from_file_csv(cls):
-"""
+        """
+        load from a .csv file
+        """
+        filename = cls.__name__ + ".csv"
+        if os.path.exists(filename) is False:
+            return []
+        ret = []
+        dic = {}
+        if cls.__name__ == "Rectangle":
+            csv_format = ['id', 'width', 'height', 'x', 'y']
+        else:
+            csv_format = ['id', 'size', 'x', 'y']
+
+        with open(filename, mode="r") as fd:
+            reader = csv.DictReader(fd, fieldnames=csv_format)
+            for item in reader:
+                for key in item:
+                    dic[key] = int(item[key])
+                ret.append(cls.create(**dic))
+        return ret
