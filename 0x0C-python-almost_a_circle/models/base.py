@@ -5,6 +5,7 @@ Class base
 import json
 import os
 import csv
+import turtle
 
 
 class Base:
@@ -108,3 +109,36 @@ class Base:
                     dic[key] = int(item[key])
                 ret.append(cls.create(**dic))
         return ret
+
+    def draw(list_rectangles, list_squares):
+        new_window = turtle.Screen()
+        new_window.bgcolor("white")
+        new_window.title("Made by Cristian Diaz")
+        new_turtle = turtle.Turtle()
+
+        for rectangle in list_rectangles:
+            new_turtle.color("Violet", "blue")
+            new_turtle.begin_fill()
+            dic = rectangle.to_dictionary()
+            new_turtle.penup()
+            new_turtle.setpos(dic["x"], dic["y"])
+            new_turtle.pendown()
+            for x in range(0, 2):
+                new_turtle.forward(dic["height"])
+                new_turtle.right(90)
+                new_turtle.forward(dic["width"])
+                new_turtle.right(90)
+            new_turtle.end_fill()
+
+        for square in list_squares:
+            new_turtle.color("Red", "Green")
+            new_turtle.begin_fill()
+            dic = square.to_dictionary()
+            new_turtle.penup()
+            new_turtle.setpos(dic["x"], dic["y"])
+            new_turtle.pendown()
+            for size in range(0, 4):
+                new_turtle.forward(dic["size"])
+                new_turtle.right(90)
+            new_turtle.end_fill()
+        turtle.done()
