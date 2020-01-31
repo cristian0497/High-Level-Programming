@@ -110,7 +110,11 @@ class Base:
                 ret.append(cls.create(**dic))
         return ret
 
+    @staticmethod
     def draw(list_rectangles, list_squares):
+        """
+        Draw the objects with Turtle Graphics
+        """
         new_window = turtle.Screen()
         new_window.bgcolor("white")
         new_window.title("Made by Cristian Diaz")
