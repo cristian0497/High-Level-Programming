@@ -13,10 +13,9 @@ def main():
                             port=3306,
                             charset='utf8')
     cur = query.cursor()
-    cur.execute('SELECT id, name FROM states WHERE name = "{}"ORDER BY id ASC;'
+    cur.execute('SELECT id, name FROM states WHERE name = "{}" ORDER BY id ASC'
                 .format(argv[4]))
-    cur2 = cur.fetchall()
-    for result in cur2:
+    for result in cur.fetchall():
         print(result)
     query.close()
     cur.close()
