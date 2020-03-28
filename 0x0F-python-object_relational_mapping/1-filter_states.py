@@ -13,8 +13,8 @@ def main():
                             port=3306,
                             charset='utf8')
     cur = query.cursor()
-    cur.execute("SELECT id, name FROM states WHERE name LIKE 'N%' OR name LIKE \
-    'n%' ORDER BY id ASC;")
+    cur.execute("SELECT id, name FROM states WHERE name RLIKE '^N|^n' ORDER BY\
+    id ASC;")
     cur2 = cur.fetchall()
     for result in cur2:
         print(result)
