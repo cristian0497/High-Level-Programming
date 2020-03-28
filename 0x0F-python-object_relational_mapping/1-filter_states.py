@@ -14,7 +14,7 @@ def function():
                                 port=3306)
         cur = query.cursor()
         cur.execute("""SELECT id, name FROM states WHERE name RLIKE '^N' ORDER BY\
-        state.id ASC""")
+        id ASC""")
         cur2 = cur.fetchall()
         for result in cur2:
             print(result)
