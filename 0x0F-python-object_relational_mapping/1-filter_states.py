@@ -4,7 +4,7 @@ import MySQLdb
 from sys import argv
 
 
-if __name__ == '__main__':
+def function():
     """ fenction to query in MySql server db witn name start N"""
     try:
         query = MySQLdb.connect(host='localhost',
@@ -14,8 +14,8 @@ if __name__ == '__main__':
                                 port=3306,
                                 charset='utf8')
         cur = query.cursor()
-        cur.execute("SELECT id, name FROM states WHERE name RLIKE '^N|^n' ORDER BY\
-        id ASC;")
+        cur.execute("SELECT id, name FROM states WHERE name RLIKE '^N' ORDER BY\
+        id ASC")
         cur2 = cur.fetchall()
         for result in cur2:
             print(result)
@@ -23,3 +23,5 @@ if __name__ == '__main__':
         cur.close()
     except:
         pass
+if __name__ == '__main__':
+    function()
