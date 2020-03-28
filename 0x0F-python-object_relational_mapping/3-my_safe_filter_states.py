@@ -15,7 +15,7 @@ def main():
                                 charset='utf8')
         cur = query.cursor()
         cur.execute('''SELECT * FROM states WHERE name = %s ORDER BY \
-        states.id ASC''',(argv[4], ))
+        states.id ASC''', (argv[4], ))
         for result in cur.fetchall():
             print(result)
     except Exception as error:
