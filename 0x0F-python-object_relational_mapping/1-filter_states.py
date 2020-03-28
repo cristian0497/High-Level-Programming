@@ -13,13 +13,12 @@ def function():
                                 db=argv[3],
                                 port=3306)
         cur = query.cursor()
-        cur.execute("""SELECT id, name FROM states WHERE name RLIKE '^N' ORDER BY\
-        id ASC""")
+        cur.execute("SELECT id, name FROM states WHERE name RLIKE '^N' ORDER BY\
+        states.id ASC")
         cur2 = cur.fetchall()
         for result in cur2:
             print(result)
-        query.close()
-        cur.close()
+
     except:
         pass
 if __name__ == '__main__':
