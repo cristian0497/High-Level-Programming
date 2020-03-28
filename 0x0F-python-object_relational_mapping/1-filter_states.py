@@ -5,7 +5,7 @@ from sys import argv
 
 
 def main():
-    """ fenction to query in MySql server db"""
+    """ fenction to query in MySql server db witn name start N"""
     query = MySQLdb.connect(host='localhost',
                             user=argv[1],
                             passwd=argv[2],
@@ -15,11 +15,11 @@ def main():
     cur = query.cursor()
     cur.execute("SELECT id, name FROM states WHERE name LIKE 'N%' OR name LIKE \
     'n%' ORDER BY id ASC;")
-
-    for result in cur:
+    cur2 = cur.fetchall()
+    for result in cur2:
         print(result)
-    cur.close()
     query.close()
+    cur.close()
 
 if __name__ == "__main__":
     main()
