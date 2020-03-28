@@ -4,7 +4,7 @@ import MySQLdb
 from sys import argv
 
 
-def main():
+if __name__ == '__main__':
     """ fenction to query in MySql server db witn name start N"""
     try:
         query = MySQLdb.connect(host='localhost',
@@ -23,6 +23,3 @@ def main():
         cur.close()
     except:
         pass
-
-if __name__ == "__main__":
-    main()
