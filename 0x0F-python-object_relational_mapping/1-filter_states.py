@@ -12,7 +12,7 @@ def main():
                                 db=argv[3],
                                 port=3306)
         cur = query.cursor()
-        cur.execute("SELECT * FROM states WHERE name LIKE 'N%' ORDER BY\
+        cur.execute("SELECT * FROM states WHERE name LIKE BINARY'N%' ORDER BY\
         states.id ASC")
         cur2 = cur.fetchall()
         for result in cur2:
