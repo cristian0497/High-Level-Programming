@@ -20,7 +20,7 @@ def main():
                    .join(City, City.state_id == State.id)\
                    .order_by(City.id)
     for var in query.all():
-        print("{}: ({}) {}".format(var.name, var.id, var.name))
+        print("{}: ({}) {}".format(var[0], var.id, var[2]))
 
     session.close()
 
