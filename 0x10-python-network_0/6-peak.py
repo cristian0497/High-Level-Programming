@@ -5,7 +5,7 @@
 def find_peak(list_int):
     if len(list_int) > 0:
         y = 1
-        for x in range(1, len(list_int)):
+        for x in range(0, len(list_int)):
             if list_int[x] >= list_int[x-1] and list_int[x] >= list_int[x + 1]:
                 return list_int[x]
         if list_int[y] > list_int[y + 1]:
