@@ -4,6 +4,7 @@ import urllib.request
 
 
 def main():
+    """ request a urllib """
     url = urllib.request.Request('https://intranet.hbtn.io/status')
     with urllib.request.urlopen(url) as response:
         info = response.read()
