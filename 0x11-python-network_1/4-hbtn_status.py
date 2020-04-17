@@ -6,7 +6,7 @@ import requests
 def main():
     """ request packager and print status and type of responde """
     url = requests.get('https://w3schools.com/python/demopage.htm')
-    print("Body responde:")
+    print("Body response:")
     print("\t- type: {}".format(type(url.text)))
     print("\t- content: {}".format(url.reason))
 
