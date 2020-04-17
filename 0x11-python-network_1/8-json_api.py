@@ -12,8 +12,8 @@ def main():
         url = requests.post('http://0.0.0.0:5000/search_user', data=dic)
         response = url.json()
         if (response):
-            id_user = response.get("name")
-            name = response.get("id")
+            id_user = response.get("id")
+            name = response.get("name")
             print("[{}] {}".format(id_user, name))
         else:
             print("No result")
