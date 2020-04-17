@@ -6,12 +6,11 @@ import requests
 
 def main():
     """ Github Request """
-    dic = {}
-    dic['author'] = sys.argv[2]
-    dic['repo'] = sys.argv[1]
-    url = requests.get('https://api.github.com/repos/', params=dic)
+    st = "{}/{}".format(sys.argv[1], sys.argv[2])
+    url = requests.get('https://api.github.com/repos/{}/commits'.format(st))
     response = url.json()
-    print(response)
+    for x in response[:10]:
+        print("{}: {}".format(x['sha'], x['author']['login']))
 
 if __name__ == "__main__":
     main()
