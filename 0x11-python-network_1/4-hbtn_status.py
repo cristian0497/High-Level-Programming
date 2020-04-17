@@ -5,10 +5,10 @@ import requests
 
 def main():
     """ request packager and print status and type of responde """
-    url = requests.get('https://w3schools.com/python/demopage.htm')
+    url = requests.get('https://intranet.hbtn.io/status')
     print("Body response:")
     print("\t- type: {}".format(type(url.text)))
-    print("\t- content: {}".format(url.reason))
+    print("\t- content: {}".format(url.text))
 
 if __name__ == "__main__":
     main()
