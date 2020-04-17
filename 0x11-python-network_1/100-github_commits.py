@@ -6,7 +6,7 @@ import requests
 
 def main():
     """ Github Request """
-    st = "{}/{}".format(sys.argv[1], sys.argv[2])
+    st = "{}/{}".format(sys.argv[2], sys.argv[1])
     url = requests.get('https://api.github.com/repos/{}/commits'.format(st))
     response = url.json()
     for key in response[:10]:
