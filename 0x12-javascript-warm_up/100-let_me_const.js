@@ -1,3 +1,4 @@
 #!/usr/bin/node
 require('./100-main').myVar
-myVar = 333
+myVar = '333'
+return myVar
