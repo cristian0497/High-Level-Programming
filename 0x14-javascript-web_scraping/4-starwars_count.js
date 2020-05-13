@@ -7,7 +7,7 @@ if (process.argv[2] === 'https://swapi-api.hbtn.io/api/films') {
       console.log(error);
     } else {
       const full = JSON.parse(body.body);
-      console.log(full.films.length);
+      console.log("" + full.films.length);
     }
   });
 }
