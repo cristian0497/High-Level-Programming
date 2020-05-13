@@ -11,6 +11,7 @@ request.get(url, function (error, body) {
         if (error) {
           console.log(error);
         } else {
+	  console.log(values[x])
           console.log(JSON.parse(characters.body).name);
         }
       });
