@@ -25,4 +25,4 @@ Hello, Welcome to Higher level programming repository, here you can find Python,
 
 ### 
 
-more info Cristian Hurtado Diaz - Software Developer - cristian04.97@hotmail.com
+More info: Cristian Hurtado Diaz - Software Developer - cristian04.97@hotmail.com - 3002379275
